@@ -1,0 +1,72 @@
+<input type="hidden" value="  <!DOCTYPE html>
+
+    <head>
+<html>
+<head>
+<script>
+var bark = new Audio();
+bark.src = &quot;bark.mp3&quot;;
+var meow = new Audio();
+meow.src = &quot;meow.mp3&quot;;
+var horse = new Audio();	
+horse.src = &quot;horse.mp3&quot;;
+var goose = new Audio();	
+goose.src = &quot;goose.mp3&quot;;
+var parrot = new Audio();	
+parrot.src = &quot;parrot.mp3&quot;;
+</script>
+        <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff66ff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+ 
+}
+ .active {
+  background-color: #ff944d;
+}
+body
+{
+  background-image: url(&quot;farm.jpg&quot;);
+ background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+img {
+  border-radius: 50%;
+}
+</style>
+   <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;/>
+    <title>Háziállatok</title>
+</head>
+<body>
+<ul>
+  <li><a  class=&quot;active&quot; href=&quot;Kezdooldal.html&quot;>Kezdőoldal</a></li>
+  <li><a href=&quot;A szerzorol.html&quot;>A szerzőről</a></li>
+  <li><a  href=&quot;Hasznalati utasitas.html&quot;>Használati utasítás</a></li>
+</ul>
+<a href=&quot;dog.html&quot;><img onmouseover = &quot;bark.play()&quot; img src=&quot;dog.jpg&quot; alt=&quot;Kutya&quot; width=&quot;300&quot; height=&quot;250&quot;></a>
+<a href=&quot;cat.html&quot;><img onmouseover = &quot;meow.play()&quot; src=&quot;cat.jpg&quot; alt=&quot;Macska&quot; width=&quot;300&quot; height=&quot;250&quot;></a>
+<a href=&quot;horse.html&quot;><img onmouseover = &quot;horse.play()&quot; src=&quot;horse.jpg&quot; alt=&quot;Ló&quot; width=&quot;300&quot; height=&quot;250&quot;</a>
+<a href=&quot;goose.html&quot;><img onmouseover = &quot;goose.play()&quot; src=&quot;goose.jpg&quot; alt=&quot;Liba&quot; width=&quot;300&quot; height=&quot;250&quot;</a>
+<a href=&quot;parrot.html&quot;><img onmouseover = &quot;parrot.play()&quot; src=&quot;parrot.jpg&quot; alt=&quot;Papagáj&quot;  width=&quot;300&quot; height=&quot;250&quot;</a>
+<script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js&quot;></script>
+    
+</html>" id="2">
