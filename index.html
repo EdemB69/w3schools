@@ -1,0 +1,154 @@
+<input type="hidden" value="<DOCTYPE! html>
+<html>
+<head>
+<link rel=&quot;stylesheet&quot; href=&quot;CSS/Style.css&quot;>
+#Tablazat {
+
+  border: 1px solid black;
+  border-collapse: collapse;
+  align: center;
+  width: 20%;
+  margin: auto;
+  margin-top: 115px;
+  
+  }
+  tr, th, td{
+  border: 1px solid black;
+  
+  
+  }
+  
+  h1{
+  text-align: center;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #00008B;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+  
+  .footer{
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+  .footer a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  
+  
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
+  
+</head>
+<body>
+<script src=&quot;JS/Js.js&quot;></script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(&quot;Tablazat&quot;);
+  switching = true;
+  dir = &quot;asc&quot;;
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName(&quot;TR&quot;);
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
+      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
+      if (dir == &quot;asc&quot;) {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == &quot;desc&quot;) {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 &amp;&amp; dir == &quot;asc&quot;) {
+        dir = &quot;desc&quot;;
+        switching = true;
+      }
+    }
+  }
+}
+
+<div class=&quot;navbar&quot;>
+  <a>Feladat B21</a>
+  <span style=&quot;color: white; font-size: 35px;&quot;>|</span>
+  <span style=&quot;color: white;&quot;>Táblázat sorbarendezése</span>
+</div>
+</br>
+</br>
+<header>
+<h1>Táblázat sorbarendezése</h1>
+</header>
+
+<table id=&quot;Tablazat&quot;>
+<tr>
+<th style=&quot;background-color: silver;&quot;><a href=&quot;#&quot; onClick=&quot;sortTable(0)&quot;>Sorszám</a></th>
+<th style=&quot;background-color: silver;&quot;><a  href=&quot;#&quot; onclick=&quot;sortTable(1)&quot;>Név</th>
+<th style=&quot;background-color: silver;&quot;><a href=&quot;#&quot; onclick=&quot;sortTable(2)&quot;>Vezetéknév</th>
+</tr>
+<tr>
+<td>1.</td>
+<td>Pera</td>
+<td>Mikic</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Mika</td>
+<td>Zikic</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>Zika</td>
+<td>Peric</td>
+</tr>
+</table>
+
+<div class=&quot;footer&quot;>
+  <a>Köztársasági Statisztikai Hivatal</a>
+  <a style=&quot;float: right; text-decoration-line: underline;&quot; href=&quot;Alkalmazasrol.html&quot;>Az alkalmazásról</a>
+</div>
+
+</body>
+
+</html>" id="21">
